@@ -76,7 +76,6 @@ pm.dexopt.post-boot=extract
 pm.dexopt.shared=quicken
 qemu.hw.mainkeys=0
 ro.actionable_compatible_property.enabled=true
-ro.allow.mock.location=0
 ro.ap.add_googlekey_water=1
 ro.ap.camera_guideline=1
 ro.ap.camera_location=1
