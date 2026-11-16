@@ -83,9 +83,6 @@ PRODUCT_PACKAGES += \
     multi_init.rc \
     init.recovery.mt6739.rc \
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6739:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.mt6739
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)

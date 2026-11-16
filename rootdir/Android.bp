@@ -163,4 +163,5 @@ prebuilt_etc {
     name: "fstab.mt6739",
     src: "etc/fstab.mt6739",
     vendor: true,
+    ramdisk: true,
 }
