@@ -160,8 +160,16 @@ prebuilt_etc {
 
 // fstab
 prebuilt_etc {
+    name: "fstab.mt6739.init",
+    src: "etc/fstab.mt6739",
+    filename: "fstab.mt6739",
+    vendor: true,
+    ramdisk: true,
+}
+
+prebuilt_etc {
     name: "fstab.mt6739",
     src: "etc/fstab.mt6739",
     vendor: true,
-    ramdisk: true,
+    ramdisk_available: true,
 }

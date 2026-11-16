@@ -33,7 +33,7 @@ PRODUCT_PACKAGES += \
     otapreopt_script
 
 # API levels
-PRODUCT_SHIPPING_API_LEVEL := 31
+PRODUCT_SHIPPING_API_LEVEL := 30
 
 # fastbootd
 PRODUCT_PACKAGES += \
@@ -60,6 +60,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     fstab.mt6739 \
+    fstab.mt6739.init \
     factory_init.connectivity.common.rc \
     factory_init.connectivity.rc \
     factory_init.project.rc \
@@ -81,11 +82,15 @@ PRODUCT_PACKAGES += \
     meta_init.rc \
     meta_init.vendor.rc \
     multi_init.rc \
-    init.recovery.mt6739.rc \
+    init.recovery.mt6739.rc
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
+
+# Boot animation
+TARGET_SCREEN_WIDTH := 480
+TARGET_SCREEN_HEIGHT := 960
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/fise/KL605/KL605-vendor.mk)
