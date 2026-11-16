@@ -1,0 +1,9 @@
+# Miscellaneous
+dalvik.vm.systemservercompilerfilter=speed-profile
+ro.com.google.acsa=true
+ro.com.google.gmsversion=12_202207.go
+ro.opa.eligible_device=true
+ro.setupwizard.enable_bypass=1
+ro.setupwizard.rotation_locked=true
+setupwizard.feature.checkin_timeout_enabled=false
+
