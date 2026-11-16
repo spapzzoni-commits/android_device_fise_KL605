@@ -83,6 +83,11 @@ TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 TARGET_ODM_DLKM_PROP += $(DEVICE_PATH)/odm_dlkm.prop
 TARGET_VENDOR_DLKM_PROP += $(DEVICE_PATH)/vendor_dlkm.prop
 
+TARGET_COPY_OUT_VENDOR := vendor
+
+#pour nettoyage proprietary files
+#BUILD_BROKEN_DUP_RULES := true
+
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6739
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
