@@ -96,5 +96,8 @@ allow system_server tkcore_systa_file:dir getattr;
 allow system_server sysfs:file read;
 allow merged_hal_service sysfs_therm:file read;
 
+#============= volte_imsm_93 ==============
+allow volte_imsm_93 service_nvram_init_prop:file read;
+allow volte_imsm_93 service_nvram_init_prop:file open;
 
 #allow system_suspend sysfs:dir read; (erreur compilation ERROR 'unknown type system_suspend' at token ';')

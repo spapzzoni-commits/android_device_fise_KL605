@@ -37,7 +37,8 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 
 # ConfigStore
 PRODUCT_PACKAGES += \
-    android.hardware.configstore@1.1-service
+    android.hardware.configstore@1.1-service \
+    disable_configstore
 
 # fastbootd
 PRODUCT_PACKAGES += \
