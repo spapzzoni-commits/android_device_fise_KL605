@@ -1,2 +1,10 @@
 /vendor/bin/hw/android\.hardware\.keymaster@4\.1-service\.trustkernel u:object_r:hal_keymaster_default_exec:s0
- /dev/mmcblk0rpmb u:object_r:teei_rpmb_device:s0
+/dev/mmcblk0rpmb u:object_r:teei_rpmb_device:s0
+/vendor/lib/libPVRMtkutils\.so   u:object_r:same_process_hal_file:s0
+/vendor/lib/egl/libGLESv2_mtk\.so     u:object_r:same_process_hal_file:s0
+/vendor/lib/egl/libGLESv1_CM_mtk\.so  u:object_r:same_process_hal_file:s0
+/vendor/lib/egl/libGLES_meow\.so      u:object_r:same_process_hal_file:s0
+/vendor/lib/egl/libMEOW_gift\.so      u:object_r:same_process_hal_file:s0
+/vendor/lib/egl/libMEOW_qt\.so        u:object_r:same_process_hal_file:s0
+/vendor/lib/egl/libMEOW_trace\.so     u:object_r:same_process_hal_file:s0
+/vendor/lib/hw/gralloc\.rogue\.so       u:object_r:same_process_hal_file:s0

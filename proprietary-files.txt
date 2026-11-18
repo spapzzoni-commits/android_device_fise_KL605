@@ -206,9 +206,12 @@ vendor/etc/init/android.hardware.boot@1.2-service.rc
 # Camera
 vendor/bin/hw/camerahalserver
 vendor/lib/hw/vendor.mediatek.hardware.camera.lomoeffect@1.0-impl.so
-vendor/lib/mt6739/libdpframework.so;SYMLINK=vendor/lib/libdpframework.so
-vendor/lib/mt6739/libmtk_drvb.so;SYMLINK=vendor/lib/libmtk_drvb.so
-vendor/lib/mt6739/libpq_prot.so;SYMLINK=vendor/lib/libpq_prot.so
+vendor/lib/mt6739/libdpframework.so
+vendor/lib/libdpframework.so
+vendor/lib/mt6739/libmtk_drvb.so
+vendor/lib/libmtk_drvb.so
+vendor/lib/mt6739/libpq_prot.so
+vendor/lib/libpq_prot.so
 vendor/lib/bf2253l_mipi_raw_IdxMgr.so
 vendor/lib/gc5035mipi_raw_IdxMgr.so
 vendor/lib/gc5035mipi_raw_main_IdxMgr.so
@@ -454,6 +457,7 @@ vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libmockdrmcryptoplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/libwvhidl.so
+vendor/lib/libdrm.so
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service
@@ -1223,3 +1227,10 @@ vendor/lib/android.hardware.usb.gadget@1.1.so
 vendor/lib/android.hardware.media.c2@1.0.so
 vendor/lib/android.hardware.media.c2@1.1.so
 vendor/lib/android.hardware.media.c2@1.2.so
+vendor/lib/libhidltransport.so
+vendor/lib/android.hardware.power-service-mediatek.so
+vendor/lib/libhwbinder.so
+vendor/lib/android.hardware.usb@1.0.so
+vendor/lib/libavservices_minijail_vendor.so
+vendor/lib/android.hardware.sensors@2.0.so
+vendor/lib/android.frameworks.sensorservice@1.0.so
