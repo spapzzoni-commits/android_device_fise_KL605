@@ -54,21 +54,47 @@ allow servicemanager hal_light_default:binder call;
 #============= system_app ==============
 allow system_app mtk_default_prop:file read;
 
-#============= system_server ==============
-
-#!!!! This avc is allowed in the current policy
-allow system_server sysfs:file read;
-
-#!!!! This avc is allowed in the current policy
-allow system_server tkcore_systa_file:dir getattr;
-
-#============= system_suspend ==============
-#allow system_suspend sys_usb_rawbulk:dir read;
-#allow system_suspend sysfs:dir read;
-#allow system_suspend sysfs_power_supply:dir read;
-
 #============= volte_imsm_93 ==============
 allow volte_imsm_93 mtk_md_version_prop:file read;
 
-#!!!! This avc is allowed in the current policy
-allow volte_imsm_93 system_prop:file read;
+#============= bootanim ==============
+allow bootanim mtk_default_prop:file open;
+
+#============= hal_wifi_default ==============
+allow hal_wifi_default wlan_fw_prop:property_service set;
+
+#============= merged_hal_service ==============
+allow merged_hal_service sysfs_therm:dir search;
+
+#============= mtk_hal_c2 ==============
+allow mtk_hal_c2 graphics_device:chr_file open;
+allow mtk_hal_c2 mtk_default_prop:file open;
+allow mtk_hal_c2 mtk_vdec_log_prop:file open;
+
+#============= mtk_hal_camera ==============
+allow mtk_hal_camera gsi_metadata_file:dir search;
+allow mtk_hal_camera service_nvram_init_prop:file open;
+allow mtk_hal_camera sysfs_dt_firmware_android:file open;
+
+#============= rild ==============
+allow rild mtk_md_version_prop:file open;
+
+#============= volte_imsm_93 ==============
+allow volte_imsm_93 mtk_md_version_prop:file open;
+
+get_prop(mtk_hal_camera, service_nvram_init_prop)
+get_prop(mtk_hal_camera, wmt_prop)
+get_prop(volte_imsm_93, system_prop)
+get_prop(bootanim, mtk_default_prop)
+get_prop(mtk_hal_c2, mtk_default_prop)
+get_prop(mtk_hal_c2, mtk_vdec_log_prop)
+get_prop(audioserver, vendor_default_prop)
+get_prop(rild, mtk_md_version_prop)
+get_prop(volte_imsm_93, mtk_md_version_prop)
+allow mtk_hal_camera sysfs_dt_firmware_android:file getattr;
+allow system_server tkcore_systa_file:dir getattr;
+allow system_server sysfs:file read;
+allow merged_hal_service sysfs_therm:file read;
+
+
+#allow system_suspend sysfs:dir read; (erreur compilation ERROR 'unknown type system_suspend' at token ';')

@@ -35,6 +35,10 @@ PRODUCT_PACKAGES += \
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# ConfigStore
+PRODUCT_PACKAGES += \
+    android.hardware.configstore@1.1-service
+
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
