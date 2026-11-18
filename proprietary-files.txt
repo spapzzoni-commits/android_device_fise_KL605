@@ -343,7 +343,7 @@ vendor/lib/libmtkcam_sysutils.so
 vendor/lib/libmtkcam_tuning_utils.so
 vendor/lib/libmtkcam_ulog.so
 vendor/lib/libnvramagentclient.so
-#vendor/lib/libsensorndkbridge.so
+vendor/lib/libsensorndkbridge.so
 vendor/lib/libstereoinfoaccessor_vsdof.so
 vendor/lib/libudf.so
 vendor/lib/libvcodec_utility.so
@@ -681,7 +681,7 @@ vendor/lib/vendor.mediatek.hardware.rcs@2.0.so
 vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so
 
 # RenderScript
-#vendor/lib/hw/android.hardware.renderscript@1.0-impl.so
+vendor/lib/hw/android.hardware.renderscript@1.0-impl.so
 
 # Sensors
 vendor/bin/hw/android.hardware.sensors@2.0-service.multihal-mediatek
@@ -801,7 +801,7 @@ vendor/etc/init/aee_aedv.rc
 vendor/etc/init/atcid.rc
 vendor/etc/init/audiocmdservice_atci.rc
 vendor/etc/init/bootperf.rc
-#vendor/etc/init/boringssl_self_test.rc
+vendor/etc/init/boringssl_self_test.rc
 vendor/etc/init/camerahalserverLazy.rc
 vendor/etc/init/chipinfo_init.rc
 vendor/etc/init/dmc_core.rc
@@ -827,9 +827,9 @@ vendor/etc/init/netdagent.rc
 vendor/etc/init/networksetting.rc
 vendor/etc/init/trustkernel.rc
 vendor/etc/init/vendor.mediatek.hardware.aee@1.1-service.rc
-#vendor/etc/init/vendor_flash_recovery.rc
+vendor/etc/init/vendor_flash_recovery.rc
 vendor/etc/init/vibrator-mtk-lazy.rc
-#vendor/etc/init/vndservicemanager.rc
+vendor/etc/init/vndservicemanager.rc
 vendor/etc/ipsec/ipsec.d/cacerts/DigiCertGlobalRootCA.crt
 vendor/etc/ipsec/ipsec.d/cacerts/DigiCertGlobalRootG2.crt
 vendor/etc/ipsec/ipsec.d/cacerts/DigiCertGlobalRootG3.crt
@@ -1069,7 +1069,7 @@ vendor/firmware/mt6627_fm_v1_patch.bin
 vendor/firmware/remoteproc_scp
 vendor/firmware/rgx.fw
 vendor/firmware/rgx.sh
-#vendor/lib/hw/audio_policy.stub.so
+vendor/lib/hw/audio_policy.stub.so
 vendor/lib/hw/thermal_hal.so
 vendor/lib/bf2253l_mipi_raw_tuning.so
 vendor/lib/gc5035mipi_raw_main_tuning.so
@@ -1172,7 +1172,7 @@ vendor/lib/librgbwlightsensor.so
 vendor/lib/librt_extamp_intf.so
 vendor/lib/libsimlock.so
 vendor/lib/libsimmelock.so
-#vendor/lib/libsoft_attestation_cert.so
+vendor/lib/libsoft_attestation_cert.so
 vendor/lib/libspeech_enh_lib.so
 vendor/lib/libspeechparser_vendor.so
 vendor/lib/libthermalalgo.so
@@ -1194,13 +1194,13 @@ vendor/lib/libvp8dec_sa.ca7.so
 vendor/lib/libvp8enc_sa.ca7.so
 vendor/lib/libvp9dec_sa.ca7.so
 vendor/lib/libvpu5.so
-#vendor/lib/libvpx.so
+vendor/lib/libvpx.so
 vendor/lib/libvt_custom.so
 vendor/lib/libwapi.so
 vendor/lib/libwifitest.so
 vendor/lib/libwpa_client.so
 vendor/lib/libwpfa.so
-#vendor/lib/libz_stable.so
+vendor/lib/libz_stable.so
 vendor/lib/meta_wifi_data.so
 vendor/lib/ov2680_mipi_raw_tuning.so
 vendor/lib/ov8865_mipi_raw_tuning.so
@@ -1236,6 +1236,35 @@ vendor/lib/modules/trace_mmstat.ko
 vendor/lib/modules/wlan_drv_gen2.ko
 vendor/lib/modules/bt_drv_connac1x.ko
 vendor/lib/modules/gps_drv.ko
+
+# Permissions
+vendor/etc/permissions/android.hardware.usb.accessory.xml
+vendor/etc/permissions/android.hardware.telephony.gsm.xml
+vendor/etc/permissions/android.hardware.faketouch.xml
+vendor/etc/permissions/handheld_core_hardware.xml
+vendor/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml
+vendor/etc/permissions/android.hardware.touchscreen.multitouch.xml
+vendor/etc/permissions/android.hardware.bluetooth.xml
+vendor/etc/permissions/android.software.midi.xml
+vendor/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
+vendor/etc/permissions/android.hardware.hardware_keystore.km41.xml
+vendor/etc/permissions/android.hardware.bluetooth_le.xml
+vendor/etc/permissions/android.hardware.usb.host.xml
+vendor/etc/permissions/android.hardware.location.gps.xml
+vendor/etc/permissions/android.hardware.wifi.passpoint.xml
+vendor/etc/permissions/android.hardware.wifi.direct.xml
+vendor/etc/permissions/android.hardware.microphone.xml
+vendor/etc/permissions/android.software.verified_boot.xml
+vendor/etc/permissions/android.hardware.wifi.xml
+vendor/etc/permissions/android.software.ipsec_tunnels.xml
+vendor/etc/permissions/android.hardware.telephony.ims.xml
+vendor/etc/permissions/android.hardware.audio.low_latency.xml
+vendor/etc/permissions/android.hardware.sensor.proximity.xml
+vendor/etc/permissions/android.software.opengles.deqp.level.xml
+vendor/etc/permissions/android.hardware.opengles.aep.xml
+vendor/etc/permissions/android.hardware.camera.xml
+vendor/etc/permissions/android.hardware.touchscreen.xml
+vendor/etc/permissions/android.hardware.sensor.accelerometer.xml
 
 #test
 
