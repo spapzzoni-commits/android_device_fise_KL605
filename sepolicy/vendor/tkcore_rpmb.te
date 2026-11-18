@@ -1,0 +1,12 @@
+# eMMC RPMB char devices used by teed
+allow tkcore teei_rpmb_device:chr_file rw_file_perms;
+allowxperm tkcore teei_rpmb_device:chr_file ioctl { 0x5388 0x5391 };
+allowxperm tkcore teei_rpmb_device:chr_file ioctl { 0xb300-0xb301 };
+allowxperm tkcore teei_rpmb_device:chr_file ioctl { 0xa-0xd };
+
+# sdrpmb / rpmb block node
+allow tkcore rpmb_block_device:blk_file rw_file_perms;
+allowxperm tkcore rpmb_block_device:blk_file ioctl { MMC_IOC_MULTI_CMD UFS_IOCTL_RPMB };
+
+# proinfo (mmcblk0p14) lu par tkuinit
+allow tkcore nvram_device:blk_file rw_file_perms;

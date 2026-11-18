@@ -61,6 +61,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.mt6739 \
     fstab.mt6739.init \
+    fstab.enableswap.init \
+    fstab.enableswap \
     factory_init.connectivity.common.rc \
     factory_init.connectivity.rc \
     factory_init.project.rc \

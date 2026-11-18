@@ -46,7 +46,7 @@ BOARD_SECOND_OFFSET := 0xc0000000
 BOARD_KERNEL_TAGS_OFFSET := 0x04000000
 BOARD_DTB_OFFSET := 0x04000000
 
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32S1,32S1 loglevel=8 printk.devkmsg=on
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32S1,32S1 loglevel=8 printk.devkmsg=on audit_backlog_limit=65536 androidboot.vbmeta.device_state=unlocked androidboot.vbmeta.digest=0000000000000000000000000000000000000000000000000000000000000000
 
 BOARD_MKBOOTIMG_ARGS := --base $(BOARD_KERNEL_BASE)
 BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE)
@@ -142,6 +142,11 @@ BOARD_AVB_VBMETA_VENDOR_ALGORITHM := SHA256_RSA2048
 BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX := 1
 BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX_LOCATION := 3
 
+BOARD_AVB_BOOT_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
+BOARD_AVB_BOOT_ALGORITHM := SHA256_RSA2048
+BOARD_AVB_BOOT_ROLLBACK_INDEX := 1
+BOARD_AVB_BOOT_ROLLBACK_INDEX_LOCATION := 4
+
 # VINTF
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml \
 	$(DEVICE_PATH)/vintf/manifest/gnss@2.1-service.xml \
@@ -179,5 +184,6 @@ ODM_MANIFEST_FILES += \
 include vendor/fise/KL605/BoardConfigVendor.mk
 
 # Sepolicy
-#include device/mediatek/sepolicy_vndr/SEPolicy.mk
+include device/mediatek/sepolicy_vndr/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SELINUX_IGNORE_NEVERALLOWS := true
