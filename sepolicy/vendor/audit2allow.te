@@ -13,3 +13,62 @@ allow hal_health_default sysfs:file read;
 #============= init ==============
 allow init sysfs:file setattr;
 allow init sysfs_class:lnk_file read;
+
+#============= audioserver ==============
+
+#!!!! This avc is allowed in the current policy
+allow audioserver vendor_default_prop:file read;
+
+#============= bootanim ==============
+allow bootanim mtk_default_prop:file read;
+
+#============= hal_health_default ==============
+allow hal_health_default sysfs_power_supply:dir search;
+
+#============= merged_hal_service ==============
+allow merged_hal_service self:netlink_kobject_uevent_socket create;
+allow merged_hal_service sysfs_thermal:dir search;
+
+#============= mtk_hal_c2 ==============
+allow mtk_hal_c2 graphics_device:chr_file read;
+allow mtk_hal_c2 mtk_default_prop:file read;
+allow mtk_hal_c2 mtk_vdec_log_prop:file read;
+
+#============= mtk_hal_camera ==============
+allow mtk_hal_camera metadata_file:dir search;
+allow mtk_hal_camera service_nvram_init_prop:file read;
+allow mtk_hal_camera sysfs_dt_firmware_android:file read;
+
+#============= platform_app ==============
+allow platform_app mtk_default_prop:file read;
+
+#============= priv_app ==============
+allow priv_app mtk_default_prop:file read;
+
+#============= rild ==============
+allow rild mtk_md_version_prop:file read;
+
+#============= servicemanager ==============
+allow servicemanager hal_light_default:binder call;
+
+#============= system_app ==============
+allow system_app mtk_default_prop:file read;
+
+#============= system_server ==============
+
+#!!!! This avc is allowed in the current policy
+allow system_server sysfs:file read;
+
+#!!!! This avc is allowed in the current policy
+allow system_server tkcore_systa_file:dir getattr;
+
+#============= system_suspend ==============
+#allow system_suspend sys_usb_rawbulk:dir read;
+#allow system_suspend sysfs:dir read;
+#allow system_suspend sysfs_power_supply:dir read;
+
+#============= volte_imsm_93 ==============
+allow volte_imsm_93 mtk_md_version_prop:file read;
+
+#!!!! This avc is allowed in the current policy
+allow volte_imsm_93 system_prop:file read;
