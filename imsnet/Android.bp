@@ -1,0 +1,13 @@
+android_app {
+    name: "ImsNet",
+    srcs: ["src/**/*.java"],
+    manifest: "AndroidManifest.xml",
+    platform_apis: true,
+    certificate: "platform",
+    privileged: true,
+    product_specific: false,
+    dex_preopt: {
+        enabled: false,
+    },
+}
+

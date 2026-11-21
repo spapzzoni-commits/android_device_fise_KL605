@@ -109,3 +109,16 @@ get_prop(system_server, mtk_default_prop)
 allow mtk_hal_c2 graphics_device:chr_file { read open ioctl };
 allowxperm mtk_hal_c2 graphics_device:chr_file ioctl 0x4fc9;
 get_prop(mtk_hal_audio, tel_switch_prop)
+typeattribute fm_device mlstrustedobject;
+
+get_prop(platform_app, wmt_prop)
+
+#============= servicemanager ==============
+allow servicemanager hal_vibrator_default:binder call;
+
+#============= system_app ==============
+allow system_app hal_light_default:binder call;
+allow system_app hal_vibrator_default:binder call;
+allow system_app mtk_hal_power:binder call;
+allow system_app proc_pagetypeinfo:file read;
+

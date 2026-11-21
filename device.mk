@@ -128,3 +128,14 @@ TARGET_SCREEN_HEIGHT := 960
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/fise/KL605/KL605-vendor.mk)
+
+
+#VoLTE
+PRODUCT_PACKAGES += \
+    ImsNet
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/imsnet/privapp-permissions-imsnet.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-imsnet.xml
+
+# MTK uses mtkfusionrild, not AOSP reference rild
+PRODUCT_PACKAGES := $(filter-out rild,$(PRODUCT_PACKAGES))
