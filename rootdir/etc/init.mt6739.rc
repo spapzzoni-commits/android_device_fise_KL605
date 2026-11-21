@@ -1224,3 +1224,6 @@ service osi /system/bin/osi
     #seclabel u:r:osi:s0
 
 
+# disable console
+on property:init.svc.console=running
+    stop console

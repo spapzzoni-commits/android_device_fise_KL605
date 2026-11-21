@@ -1348,3 +1348,27 @@ vendor/lib/hw/android.hardware.gnss-impl-mediatek.so
 vendor/lib/hw/android.hardware.renderscript@1.0-impl.so
 vendor/lib/hw/android.hardware.sensors@2.X-subhal-mediatek.so
 vendor/lib/hw/audio_policy.stub.so
+
+system/etc/permissions/privapp-permissions-mediatek.xml
+
+system/lib/libcomutils.so
+system/lib/libimsma.so
+system/lib/libimsma_adapt.so
+system/lib/libimsma_rtp.so
+system/lib/libimsma_socketwrapper.so
+system/lib/libmtk_vt_service.so
+system/lib/libmtk_vt_wrapper.so
+system/lib/libsignal.so
+system/lib/libsink.so
+system/lib/libsource.so
+system/lib/libvcodec_cap.so
+system/lib/libvcodec_capenc.so
+system/lib/libvt_avsync.so
+system/lib/libhidltransport.so
+system/etc/permissions/com.mediatek.wfo.legacy.xml
+
+# FMRadio
+system_ext/lib/libfmjni.so
+system_ext/priv-app/FMRadio/lib/arm/libfmjni.so:system_ext/priv-app/FMRadioStock/lib/arm/libfmjni.so
+-system_ext/priv-app/FMRadio/FMRadio.apk:system_ext/priv-app/FMRadioStock/FMRadioStock.apk
+system_ext/etc/permissions/system-ext-permissions-mediatek.xml

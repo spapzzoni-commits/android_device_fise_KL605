@@ -92,12 +92,20 @@ get_prop(audioserver, vendor_default_prop)
 get_prop(rild, mtk_md_version_prop)
 get_prop(volte_imsm_93, mtk_md_version_prop)
 allow mtk_hal_camera sysfs_dt_firmware_android:file getattr;
-allow system_server tkcore_systa_file:dir getattr;
-allow system_server sysfs:file read;
-allow merged_hal_service sysfs_therm:file read;
+allow system_server tkcore_systa_file:dir r_dir_perms;
+allow system_server sysfs:file r_file_perms;
+allow merged_hal_service sysfs_therm:file r_file_perms;
 
 #============= volte_imsm_93 ==============
 allow volte_imsm_93 service_nvram_init_prop:file read;
 allow volte_imsm_93 service_nvram_init_prop:file open;
+allow volte_imsm_93 service_nvram_init_prop:file getattr;
+allow volte_imsm_93 service_nvram_init_prop:file map;
 
 #allow system_suspend sysfs:dir read; (erreur compilation ERROR 'unknown type system_suspend' at token ';')
+
+#deepseek
+get_prop(system_server, mtk_default_prop)
+allow mtk_hal_c2 graphics_device:chr_file { read open ioctl };
+allowxperm mtk_hal_c2 graphics_device:chr_file ioctl 0x4fc9;
+get_prop(mtk_hal_audio, tel_switch_prop)

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Services démarrés par LineageSystemServer.
+         HealthInterfaceService est retiré : ce device n'a pas de HAL
+         vendor.lineage.health, et LOS 19.1 provoque un NPE au boot
+         (ChargingControlController.isChargingModeSupported sur un proxy null). -->
+    <string-array name="config_externalLineageServices">
+        <item>org.lineageos.platform.internal.ProfileManagerService</item>
+        <item>org.lineageos.platform.internal.LineageHardwareService</item>
+        <item>org.lineageos.platform.internal.display.LiveDisplayService</item>
+        <item>org.lineageos.platform.internal.TrustInterfaceService</item>
+        <item>org.lineageos.platform.internal.LineageSettingsService</item>
+        <item>org.lineageos.platform.internal.LineageGlobalActionsService</item>
+    </string-array>
+</resources>
+

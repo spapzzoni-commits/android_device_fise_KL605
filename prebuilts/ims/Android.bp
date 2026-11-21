@@ -1,0 +1,19 @@
+android_app_import {
+    name: "ImsService",
+    apk: "ImsService.apk",
+    certificate: "platform",
+    privileged: true,
+    dex_preopt: { enabled: false },
+}
+
+dex_import { name: "mediatek-telephony-base",   jars: ["mediatek-telephony-base.jar"] }
+dex_import { name: "mediatek-telephony-common", jars: ["mediatek-telephony-common.jar"] }
+dex_import { name: "mediatek-common",           jars: ["mediatek-common.jar"] }
+dex_import { name: "mediatek-framework",        jars: ["mediatek-framework.jar"] }
+dex_import { name: "mediatek-ims-common",       jars: ["mediatek-ims-common.jar"] }
+dex_import { name: "mediatek-ims-base",         jars: ["mediatek-ims-base.jar"] }
+dex_import { name: "mediatek-telecom-common",   jars: ["mediatek-telecom-common.jar"] }
+dex_import { name: "mediatek-ims-extension-plugin",   jars: ["mediatek-ims-extension-plugin.jar"] }
+dex_import { name: "mediatek-ims-legacy",   jars: ["mediatek-ims-legacy.jar"] }
+dex_import { name: "mediatek-wfo-legacy",           jars: ["mediatek-wfo-legacy.jar"] }
+dex_import { name: "mediatek-services",             jars: ["mediatek-services.jar"] }

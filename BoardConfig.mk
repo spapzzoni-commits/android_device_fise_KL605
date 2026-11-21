@@ -162,7 +162,6 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml \
 	$(DEVICE_PATH)/vintf/manifest/android.hardware.boot@1.2.xml \
 	$(DEVICE_PATH)/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml \
 	$(DEVICE_PATH)/vintf/manifest/android.hardware.wifi@1.0-service.xml \
-#	$(DEVICE_PATH)/vintf/manifest/android.hardware.cas@1.2-service-lazy.xml \
 	$(DEVICE_PATH)/vintf/manifest/vibrator-mtk-default.xml \
 	$(DEVICE_PATH)/vintf/manifest/android.hardware.health@2.1.xml \
 	$(DEVICE_PATH)/vintf/manifest/manifest_hwcomposer.xml

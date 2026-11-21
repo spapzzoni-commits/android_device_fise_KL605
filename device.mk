@@ -52,6 +52,33 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(LOCAL_PATH)/overlay
+
+#VoLTE
+PRODUCT_PACKAGES += \
+    ImsService \
+    mediatek-telephony-base \
+    mediatek-telephony-common \
+    mediatek-common \
+    mediatek-framework \
+    mediatek-ims-common \
+    mediatek-ims-base \
+    mediatek-telecom-common \
+    mediatek-ims-extension-plugin \
+    mediatek-ims-legacy \
+    mediatek-services
+
+PRODUCT_BOOT_JARS_EXTRA += \
+    mediatek-telephony-base \
+    mediatek-telephony-common \
+    mediatek-common \
+    mediatek-framework \
+    mediatek-ims-common \
+    mediatek-ims-base \
+    mediatek-telecom-common \
+    mediatek-ims-extension-plugin \
+    mediatek-services
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
