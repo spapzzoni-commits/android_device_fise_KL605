@@ -2,6 +2,8 @@
 
 The KLIPAD KL605 is a low-range smartphone from Kliver France Import announced in 2022 and manufactured by Fise Group.
 
+Need https://github.com/nashc-dev/android_device_mediatek_sepolicy_vndr.git
+
 ## Device specifications
 
 | Device                  | KL605                                                 |
