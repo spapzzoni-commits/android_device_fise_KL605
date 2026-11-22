@@ -88,7 +88,9 @@ PRODUCT_CHARACTERISTICS := default
 
 # Rootdir
 PRODUCT_PACKAGES += \
+    fmvolume.sh \
     init.insmod.sh \
+    tinymix
 
 PRODUCT_PACKAGES += \
     fstab.mt6739 \

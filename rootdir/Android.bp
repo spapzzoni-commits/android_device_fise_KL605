@@ -10,6 +10,12 @@ sh_binary {
     vendor: true,
 }
 
+sh_binary {
+    name: "fmvolume.sh",
+    src: "bin/fmvolume.sh",
+    vendor: true,
+}
+
 // Init configuration files
 prebuilt_etc {
     name: "factory_init.connectivity.common.rc",
