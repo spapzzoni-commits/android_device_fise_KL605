@@ -1,5 +1,6 @@
 # Android device tree for KLIPAD KL605 (KL605)
-The Redmi Note 9 Pro 5G / Mi 10T Lite 5G / Mi 10i 5G (codenamed _"gauguin"_) is a mid-range smartphone from Xiaomi announced in September 2020.
+
+The KLIPAD KL605 is a low-range smartphone from Kliver France Import announced in 2022 and manufactured by Fise Group.
 
 ## Device specifications
 
